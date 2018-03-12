@@ -1,4 +1,5 @@
 package DeckOfCards
+import java.io.OutputStream
 
 /**
  * Card data class
@@ -7,8 +8,8 @@ package DeckOfCards
  * @constructor Creates a Card given a suit and a rank
  *
  */
-data class Card(val suit: Suits,
-                val rank: Ranks) {
+class Card (private val suit: Suits,
+           private val rank: Ranks) : Null(){
 
     /**
      * Overriding the toString of the card data class
@@ -21,7 +22,8 @@ data class Card(val suit: Suits,
     /**
      * Prints the Card
      */
-    fun print() = println(this)
+     override fun print(outputStream: OutputStream) = outputStream.write(this.toString().toByteArray() + "\n".toByteArray())
+
 }
 
 /**
