@@ -22,7 +22,7 @@ class Card (private val suit: Suits,
     /**
      * Prints the Card
      */
-     override fun print(outputStream: OutputStream) = outputStream.write(this.toString().toByteArray() + "\n".toByteArray())
+     override fun print(outputStream: OutputStream) = outputStream.write((this.toString() + "\r\n").toByteArray())
 
 }
 
