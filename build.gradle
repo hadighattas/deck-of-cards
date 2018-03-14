@@ -13,11 +13,14 @@ buildscript {
 
 version '1.0-SNAPSHOT'
 
+apply plugin: 'jacoco'
 apply plugin: 'kotlin-platform-jvm'
 apply plugin: 'org.jetbrains.dokka'
 
+
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
@@ -38,3 +41,18 @@ dokka {
     outputFormat = 'html'
     outputDirectory = "$project.buildDir/html"
 }
+jacoco {
+    toolVersion = "0.8.0"
+    reportsDir = file("$project.buildDir/customJacocoReportDir")
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination file("$project.buildDir/jacocoHtml")
+    }
+}
+
+
+
