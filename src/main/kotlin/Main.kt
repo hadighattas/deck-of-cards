@@ -26,6 +26,5 @@ fun main(args: Array<String>) {
     /**
      * Dealing an extra card from an empty deck
      */
-
     deck.dealOneCard().print(System.out)
 }

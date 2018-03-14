@@ -10,7 +10,8 @@ import java.io.OutputStream
 
 
 class Deck {
-    private var cards: MutableList<Card> = mutableListOf()
+
+    var cards: MutableList<Card> = mutableListOf()
 
     init {
         for (suit in Suits.values())
@@ -45,4 +46,6 @@ class Deck {
      * @param outputStream
      */
     fun print(outputStream: OutputStream) = cards.forEach { card -> card.print(outputStream) }
+
+
 }

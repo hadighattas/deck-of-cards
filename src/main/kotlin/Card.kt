@@ -2,6 +2,7 @@ package DeckOfCards
 
 import java.io.OutputStream
 
+
 /**
  * Card data class
  * @property suit is the suit of the card

@@ -25,7 +25,6 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-
     testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
     testCompile "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
 }
@@ -48,11 +47,9 @@ jacoco {
 
 jacocoTestReport {
     reports {
-        xml.enabled false
+        xml.enabled true
+        xml.destination file("$project.buildDir/jacoco/report.xml")
         csv.enabled false
         html.destination file("$project.buildDir/jacocoHtml")
     }
 }
-
-
-
