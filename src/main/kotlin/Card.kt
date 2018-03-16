@@ -4,7 +4,7 @@ import java.io.OutputStream
 
 
 /**
- * Card data class
+ * Card class
  * @property suit is the suit of the card
  * @property rank is the rank(value) o this card
  * @constructor Creates a Card given a suit and a rank
