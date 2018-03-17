@@ -21,9 +21,11 @@ chmod +x gradle/wrapper/gradle-wrapper.jar
 ./gradlew test
 ```
 
-### Generate Coverage Report
+### Coverage Report
 
+[Here](http://deckofcards-cov.bitballoon.com/)
 
+or generate using
 ```
 ./gradlew check jacocoTestReport --info
 ./gradlew jacocoTestReport
@@ -31,12 +33,12 @@ chmod +x gradle/wrapper/gradle-wrapper.jar
 
 ### Documentation
 
-Documentation built in build/html
+[Here](http://deckofcards-doc.bitballoon.com/)
 
+or generate using
 ```
 ./gradlew dokka
 ```
-
 
 ## Built With
 
